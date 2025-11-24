@@ -20,17 +20,17 @@ A high-performance, privacy-focused Flutter plugin for on-device face detection 
 <table>
   <tr>
     <td align="center">
-      <img src="media/screenshot1.png" alt="Group Detection" width="200"/><br>
+      <img src="https://raw.githubusercontent.com/mohit67890/local_face_detection/main/media/screenshot1.png" alt="Group Detection" width="200"/><br>
       <b>Multiple Face Detection</b><br>
       Detects all faces in group photos with bounding boxes and landmarks
     </td>
     <td align="center">
-      <img src="media/screenshot2.png" alt="Portrait Detection" width="200"/><br>
+      <img src="https://raw.githubusercontent.com/mohit67890/local_face_detection/main/media/screenshot2.png" alt="Portrait Detection" width="200"/><br>
       <b>Portrait Detection</b><br>
       Accurate single-face detection with 5-point facial landmarks
     </td>
     <td align="center">
-      <img src="media/demo.gif" alt="Real-time Demo" width="200"/><br>
+      <img src="https://raw.githubusercontent.com/mohit67890/local_face_detection/main/media/demo.gif" alt="Real-time Demo" width="200"/><br>
       <b>Real-Time Detection</b><br>
       Smooth detection on live camera feed or selected images
     </td>
