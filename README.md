@@ -130,16 +130,6 @@ Future<void> dispose()
 
 Releases resources and closes the ONNX session. Call when shutting down.
 
-##### `getPlatformVersion()`
-
-```dart
-Future<String?> getPlatformVersion()
-```
-
-Returns the platform version string (for debugging).
-
----
-
 ### FaceDetectionResult
 
 Represents the output of a detection operation.
@@ -340,7 +330,7 @@ The plugin uses [flutter_onnxruntime](https://pub.dev/packages/flutter_onnxrunti
 - Flutter SDK: `>=3.0.0`
 - Dart: `>=2.17.0`
 - Android: API level 21+ (Android 5.0+)
-- iOS: 12.0+
+- iOS: 16.0+
 
 ## 🛠️ Troubleshooting
 
