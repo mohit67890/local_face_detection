@@ -1,6 +1,6 @@
 name: local_face_detection
 description: "High-performance on-device face detection with ONNX. Detect faces, landmarks, and scores—100% offline, no cloud APIs. Privacy-first and blazing fast."
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/mohit67890/local_face_detection
 
 environment:
