@@ -6,6 +6,15 @@
 
 A high-performance, privacy-focused Flutter plugin for on-device face detection using ONNX Runtime. Powered by the Qualcomm Lightweight Face Detection model, this plugin detects faces and facial landmarks entirely offline—no cloud API required.
 
+<div align="center">
+  <img src="media/demo.gif" alt="Live Face Detection Demo" width="300"/>
+</div>
+
+<p align="center">
+  <img src="media/screenshot1.png" alt="Multiple Face Detection" width="250"/>
+  <img src="media/screenshot2.png" alt="Single Face Detection" width="250"/>
+</p>
+
 ## ✨ Features
 
 - 🔒 **100% On-Device Processing** – All detection happens locally; your images never leave the device
@@ -14,6 +23,28 @@ A high-performance, privacy-focused Flutter plugin for on-device face detection 
 - 🛠️ **Flexible Configuration** – Adjustable score threshold and optional NMS for fine-tuned results
 - 📱 **Cross-Platform** – Works on both Android and iOS with a unified API
 - 🧩 **Easy Integration** – Simple, intuitive API with just a few lines of code
+
+## 📸 See It In Action
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="media/screenshot1.png" alt="Group Detection" width="200"/><br>
+      <b>Multiple Face Detection</b><br>
+      Detects all faces in group photos with bounding boxes and landmarks
+    </td>
+    <td align="center">
+      <img src="media/screenshot2.png" alt="Portrait Detection" width="200"/><br>
+      <b>Portrait Detection</b><br>
+      Accurate single-face detection with 5-point facial landmarks
+    </td>
+    <td align="center">
+      <img src="media/demo.gif" alt="Real-time Demo" width="200"/><br>
+      <b>Real-Time Detection</b><br>
+      Smooth detection on live camera feed or selected images
+    </td>
+  </tr>
+</table>
 
 ## 🚀 Getting Started
 
