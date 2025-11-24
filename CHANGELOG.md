@@ -1,3 +1,8 @@
+## 0.0.3
+
+* Fixed image URLs to use GitHub raw URLs for pub.dev compatibility
+* Images now display correctly on pub.dev package page
+
 ## 0.0.2
 
 * Added visual documentation: demo GIF and screenshots in README
