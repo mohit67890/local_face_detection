@@ -6,15 +6,6 @@
 
 A high-performance, privacy-focused Flutter plugin for on-device face detection using ONNX Runtime. Powered by the Qualcomm Lightweight Face Detection model, this plugin detects faces and facial landmarks entirely offline—no cloud API required.
 
-<div align="center">
-  <img src="media/demo.gif" alt="Live Face Detection Demo" width="300"/>
-</div>
-
-<p align="center">
-  <img src="media/screenshot1.png" alt="Multiple Face Detection" width="250"/>
-  <img src="media/screenshot2.png" alt="Single Face Detection" width="250"/>
-</p>
-
 ## ✨ Features
 
 - 🔒 **100% On-Device Processing** – All detection happens locally; your images never leave the device
@@ -104,12 +95,15 @@ await faceDetector.dispose();
 #### Methods
 
 ##### `initialize()`
+
 ```dart
 Future<void> initialize()
 ```
+
 Loads the ONNX model into memory. **Must be called before detection**. Safe to call multiple times (subsequent calls are no-ops).
 
 ##### `detectFaces()`
+
 ```dart
 Future<FaceDetectionResult> detectFaces(
   Uint8List imageBytes, {
@@ -117,9 +111,11 @@ Future<FaceDetectionResult> detectFaces(
   double nmsThreshold = -1,
 })
 ```
+
 Runs face detection on the provided image bytes.
 
 **Parameters:**
+
 - `imageBytes` – Raw image data (PNG, JPEG, etc.)
 - `scoreThreshold` – Minimum confidence score (0.0–1.0). Default: `0.55`
 - `nmsThreshold` – Non-Maximum Suppression IoU threshold. Use `-1` to disable NMS. Default: `-1`
@@ -127,15 +123,19 @@ Runs face detection on the provided image bytes.
 **Returns:** `FaceDetectionResult` containing detected faces and metadata.
 
 ##### `dispose()`
+
 ```dart
 Future<void> dispose()
 ```
+
 Releases resources and closes the ONNX session. Call when shutting down.
 
 ##### `getPlatformVersion()`
+
 ```dart
 Future<String?> getPlatformVersion()
 ```
+
 Returns the platform version string (for debugging).
 
 ---
@@ -145,6 +145,7 @@ Returns the platform version string (for debugging).
 Represents the output of a detection operation.
 
 **Properties:**
+
 - `List<FaceDetection> detections` – List of detected faces
 - `int originalWidth` – Original image width
 - `int originalHeight` – Original image height
@@ -158,6 +159,7 @@ Represents the output of a detection operation.
 Represents a single detected face.
 
 **Properties:**
+
 - `Rect boundingBox` – Face bounding box in original image coordinates
 - `double score` – Confidence score (0.0–1.0)
 - `List<Offset> landmarks` – 5 facial landmarks (typically: left eye, right eye, nose, left mouth corner, right mouth corner)
@@ -198,10 +200,10 @@ class _FaceDetectionDemoState extends State<FaceDetectionDemo> {
     if (file == null) return;
 
     setState(() => _isProcessing = true);
-    
+
     final bytes = await file.readAsBytes();
     final result = await _detector.detectFaces(bytes, scoreThreshold: 0.6);
-    
+
     setState(() {
       _imageBytes = bytes;
       _result = result;
@@ -343,7 +345,9 @@ The plugin uses [flutter_onnxruntime](https://pub.dev/packages/flutter_onnxrunti
 ## 🛠️ Troubleshooting
 
 ### "Model file not found" error
+
 Ensure the model files are properly bundled:
+
 ```yaml
 flutter:
   assets:
@@ -351,11 +355,13 @@ flutter:
 ```
 
 ### Poor detection performance
+
 - Try adjusting `scoreThreshold` (lower for more detections)
 - Ensure good lighting and face visibility
 - Images should be reasonably sized (very large images may be slower)
 
 ### Memory issues
+
 - Dispose the detector when no longer needed: `await detector.dispose()`
 - Avoid keeping multiple instances active simultaneously
 
@@ -381,4 +387,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 Made with ❤️ for the Flutter community
-
